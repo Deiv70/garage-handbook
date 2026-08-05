@@ -1,0 +1,89 @@
+site_name: Garage Handbook
+site_description: Manual técnico personal de automoción
+site_url: https://deiv70.github.io/garage-handbook/
+repo_url: https://github.com/Deiv70/garage-handbook
+repo_name: Deiv70/garage-handbook
+edit_uri: edit/develop/docs/
+
+theme:
+  name: material
+  language: es
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.action.edit
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep orange
+      accent: orange
+      toggle:
+        icon: material/brightness-7
+        name: Cambiar a modo oscuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep orange
+      accent: orange
+      toggle:
+        icon: material/brightness-4
+        name: Cambiar a modo claro
+
+plugins:
+  - search:
+      lang: es
+  - tags
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+nav:
+  - Inicio: index.md
+  - Procedimientos: procedures/index.md
+  - Core:
+      - Productos químicos: core/chemicals/index.md
+      - Lubricantes y grasas: core/lubricants/index.md
+      - Materiales: core/materials/index.md
+      - Fijadores y selladores: core/fasteners/index.md
+      - Referencias: core/references/index.md
+  - Vehículos:
+      - Índice: vehicles/index.md
+      - VAG:
+          - Índice: vehicles/VAG/index.md
+          - Compartido: vehicles/VAG/shared/index.md
+          - Seat León 1M: vehicles/VAG/Seat-Leon_1M/index.md
+      - PSA:
+          - Índice: vehicles/PSA/index.md
+          - Compartido: vehicles/PSA/shared/index.md
+  - Plantillas: templates/index.md
