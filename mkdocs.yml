@@ -70,6 +70,7 @@ markdown_extensions:
 
 nav:
   - Inicio: index.md
+  - Quick Reference: quick-reference/index.md
   - Procedimientos: procedures/index.md
   - Vehículos:
       - Índice: vehicles/index.md
@@ -95,4 +96,7 @@ nav:
       - Arquitectura: about/architecture.md
       - Convenciones: about/conventions.md
       - Modelo de datos: about/data-model.md
-  - Plantillas: templates/index.md
+      - Esquema de metadatos: about/metadata-schema.md
+  - Plantillas:
+      - Índice: templates/index.md
+      - Quick Reference: templates/quick-reference.md
