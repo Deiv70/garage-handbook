@@ -80,7 +80,15 @@ nav:
       - PSA:
           - Índice: vehicles/PSA/index.md
           - Compartido: vehicles/PSA/shared/index.md
-  - Knowledge: knowledge/index.md
+  - Knowledge:
+      - Índice: knowledge/index.md
+      - Conceptos: knowledge/concepts/index.md
+      - Productos químicos: knowledge/chemicals/index.md
+      - Lubricantes y grasas: knowledge/lubricants/index.md
+      - Materiales: knowledge/materials/index.md
+      - Componentes: knowledge/components/index.md
+      - Montaje y sellado: knowledge/assembly/index.md
+      - Productos comerciales: knowledge/commercial-products/index.md
   - Acerca del proyecto:
       - Índice: about/index.md
       - Filosofía: about/project-philosophy.md
