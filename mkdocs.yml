@@ -1,5 +1,5 @@
 site_name: Garage Handbook
-site_description: Manual técnico personal de automoción
+site_description: Manual técnico y base de conocimiento de automoción
 site_url: https://deiv70.github.io/garage-handbook/
 repo_url: https://github.com/Deiv70/garage-handbook
 repo_name: Deiv70/garage-handbook
@@ -71,12 +71,6 @@ markdown_extensions:
 nav:
   - Inicio: index.md
   - Procedimientos: procedures/index.md
-  - Core:
-      - Productos químicos: core/chemicals/index.md
-      - Lubricantes y grasas: core/lubricants/index.md
-      - Materiales: core/materials/index.md
-      - Fijadores y selladores: core/fasteners/index.md
-      - Referencias: core/references/index.md
   - Vehículos:
       - Índice: vehicles/index.md
       - VAG:
@@ -86,4 +80,11 @@ nav:
       - PSA:
           - Índice: vehicles/PSA/index.md
           - Compartido: vehicles/PSA/shared/index.md
+  - Knowledge: knowledge/index.md
+  - Acerca del proyecto:
+      - Índice: about/index.md
+      - Filosofía: about/project-philosophy.md
+      - Arquitectura: about/architecture.md
+      - Convenciones: about/conventions.md
+      - Modelo de datos: about/data-model.md
   - Plantillas: templates/index.md
