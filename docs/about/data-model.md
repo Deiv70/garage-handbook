@@ -24,6 +24,23 @@ Garage Handbook usa Markdown como formato de lectura y front matter YAML como ca
 | `commercial-product` | Producto concreto del mercado | Koch Chemie Green Star |
 | `vehicle` | Modelo, plataforma o variante | Seat León 1M ASV |
 | `procedure` | Trabajo paso a paso | cambio de discos y pastillas |
+| `quick-reference` | Vista rápida derivada de otras entidades | matriz de pulverizadores IK |
+
+## Capas de consumo
+
+```mermaid
+flowchart LR
+    K[Knowledge] --> P[Procedures]
+    K --> V[Vehicles]
+    K --> Q[Quick Reference]
+    V --> P
+    P --> Q
+```
+
+- **Knowledge** conserva la explicación técnica y actúa como fuente de verdad.
+- **Procedures** explica cómo ejecutar un trabajo.
+- **Vehicles** añade aplicabilidad y particularidades concretas.
+- **Quick Reference** resume datos para una consulta inmediata.
 
 ## Relaciones
 
@@ -39,6 +56,21 @@ classDiagram
     Vehicle --> Component : contains
     Chemical --> Material : compatible_with
     Lubricant --> Material : compatible_with
+    QuickReference --> Procedure : links
+    QuickReference --> Vehicle : summarizes
+    QuickReference --> Chemical : summarizes
+    QuickReference --> Lubricant : summarizes
+    QuickReference --> Material : summarizes
+```
+
+## Contextos de uso
+
+`detailing` y `workshop` son contextos, no ramas independientes de conocimiento. Una misma familia química puede aparecer en ambos contextos sin duplicar su ficha.
+
+```yaml
+contexts:
+  - detailing
+  - workshop
 ```
 
 ## Identificadores
@@ -58,6 +90,10 @@ Los valores recomendados son:
 - `not-applicable`
 
 Una compatibilidad debe poder acompañarse de condiciones como concentración, dilución, temperatura, tiempo de contacto o necesidad de prueba previa.
+
+## Contrato de metadatos
+
+El contrato común y los campos específicos de cada entidad se definen en [Esquema de metadatos](metadata-schema.md).
 
 ## Evolución futura
 
